@@ -1,0 +1,39 @@
+Started at: 2025-07-29 09:36:48
+ID BIT: 0
+OD BIT 0 → Prob = 0.499611
+OD BIT 1 → Prob = 0.500385
+OD BIT 2 → Prob = 0.374352
+OD BIT 3 → Prob = 0.499543
+OD BIT 4 → Prob = 0.499779
+OD BIT 5 → Prob = 0.374603
+OD BIT 6 → Prob = 0.468615
+OD BIT 7 → Prob = 0.57725
+ID BIT: 1
+OD BIT 0 → Prob = 0.249991
+OD BIT 1 → Prob = 0.500814
+OD BIT 2 → Prob = 0.421736
+OD BIT 3 → Prob = 0.452427
+OD BIT 4 → Prob = 0.500209
+OD BIT 5 → Prob = 0.593937
+OD BIT 6 → Prob = 0.530625
+OD BIT 7 → Prob = 0.499681
+ID BIT: 2
+OD BIT 0 → Prob = 0.500137
+OD BIT 1 → Prob = 0.562348
+OD BIT 2 → Prob = 0.500168
+OD BIT 3 → Prob = 0.500493
+OD BIT 4 → Prob = 0.500356
+OD BIT 5 → Prob = 0.374639
+OD BIT 6 → Prob = 0.546985
+OD BIT 7 → Prob = 0.469401
+ID BIT: 3
+OD BIT 0 → Prob = 1
+OD BIT 1 → Prob = 0.625734
+OD BIT 2 → Prob = 0.46832
+OD BIT 3 → Prob = 0.531486
+OD BIT 4 → Prob = 1
+OD BIT 5 → Prob = 0.500381
+OD BIT 6 → Prob = 0.562724
+OD BIT 7 → Prob = 0.39089
+Ended   at: 2025-07-29 09:37:04
+Elapsed : 16.2492 s

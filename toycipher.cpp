@@ -15,8 +15,12 @@
  *   - Running both through 5 rounds of the cipher
  *   - Computing the probability that each output bit differs
  */
+
 #include <bitset>
+#include <chrono>
 #include <cstdint>
+#include <ctime>
+#include <iomanip>
 #include <iostream>
 #include <random>
 
@@ -68,6 +72,14 @@ static u8 Generate4BitRandom()
 
 int main(int argc, char *argv[])
 {
+
+    std::time_t start_time = std::time(nullptr);
+    std::cout << "Started at: "
+              << std::put_time(std::localtime(&start_time), "%Y-%m-%d %H:%M:%S")
+              << "\n";
+
+    auto hr_start = std::chrono::high_resolution_clock::now();
+
     u8 x[2], key, temp, total_rounds{5};
 
     // plaintext and key : k3k2k1k0||p3p2p1p0
@@ -78,7 +90,7 @@ int main(int argc, char *argv[])
     x[1] = key;
     temp = (x[1] << 4) | x[0];
     std::cout << "The plaintext is " << std::bitset<8>(temp) << "\n";
-    // The plaintext is 10011100
+    // The plaintext is 0b10011100
 
     // encryption
     for (u16 rounds{0}; rounds < total_rounds; ++rounds)
@@ -87,7 +99,17 @@ int main(int argc, char *argv[])
         temp = (x[1] << 4) | x[0];
         std::cout << "\nThe ciphertxt is " << std::bitset<8>(temp) << " after " << static_cast<u16>(rounds+1) << " rounds \n";
     }
-    return 0;
+
+   
+    auto hr_end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> elapsed = hr_end - hr_start;
+
+
+    std::time_t end_time = std::time(nullptr);
+    std::cout << "Ended   at: "
+              << std::put_time(std::localtime(&end_time), "%Y-%m-%d %H:%M:%S")
+              << "\n"
+              << "Elapsed : " << elapsed.count() << " s\n";
 }
 
 /*
